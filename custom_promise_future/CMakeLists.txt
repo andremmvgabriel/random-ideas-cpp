@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the project name (and version?)
-project(RandomIdeas)
+project(CustomPromiseFuture)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 20)
@@ -11,4 +11,5 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_HOME_DIRECTORY}/bin)
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_HOME_DIRECTORY}/lib)
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_HOME_DIRECTORY}/lib)
 
-add_subdirectory(custom_promise_future)
+add_executable( CustomPromiseFuture main.cpp )
+target_link_libraries( CustomPromiseFuture pthread )
